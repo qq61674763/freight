@@ -3,9 +3,17 @@ package com.xljt.freight.mapper;
 import com.xljt.freight.domain.CarInfo;
 import org.springframework.stereotype.Repository;
 
-/**
- * CarInfoDAO继承基类
- */
 @Repository
-public interface CarInfoDAO extends MyBatisBaseDao<CarInfo, Long> {
+public interface CarInfoDAO {
+    int deleteByPrimaryKey(Long id);
+
+    int insert(CarInfo record);
+
+    int insertSelective(CarInfo record);
+
+    CarInfo selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(CarInfo record);
+
+    int updateByPrimaryKey(CarInfo record);
 }

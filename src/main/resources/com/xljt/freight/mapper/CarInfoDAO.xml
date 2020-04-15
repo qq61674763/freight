@@ -3,20 +3,20 @@
 <mapper namespace="com.xljt.freight.mapper.CarInfoDAO">
   <resultMap id="BaseResultMap" type="com.xljt.freight.domain.CarInfo">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="VehicleNumber" jdbcType="VARCHAR" property="vehiclenumber" />
-    <result column="VehiclePlateColorCode" jdbcType="VARCHAR" property="vehicleplatecolorcode" />
-    <result column="VehicleType" jdbcType="VARCHAR" property="vehicletype" />
+    <result column="VehicleNumber" jdbcType="VARCHAR" property="vehicleNumber" />
+    <result column="VehiclePlateColorCode" jdbcType="VARCHAR" property="vehiclePlateColorCode" />
+    <result column="VehicleType" jdbcType="VARCHAR" property="vehicleType" />
     <result column="Owner" jdbcType="VARCHAR" property="owner" />
-    <result column="UseCharacter" jdbcType="VARCHAR" property="usecharacter" />
-    <result column="VIN" jdbcType="VARCHAR" property="vin" />
-    <result column="IssuingOrganizations" jdbcType="VARCHAR" property="issuingorganizations" />
-    <result column="RegisterDate" jdbcType="INTEGER" property="registerdate" />
-    <result column="IssueDate" jdbcType="INTEGER" property="issuedate" />
-    <result column="VehicleEnergyType" jdbcType="VARCHAR" property="vehicleenergytype" />
-    <result column="VehicleTonnage" jdbcType="DECIMAL" property="vehicletonnage" />
-    <result column="GrossMass" jdbcType="DECIMAL" property="grossmass" />
-    <result column="RoadTransportCertificateNumber" jdbcType="VARCHAR" property="roadtransportcertificatenumber" />
-    <result column="TrailerVehiclePlateNumber" jdbcType="INTEGER" property="trailervehicleplatenumber" />
+    <result column="UseCharacter" jdbcType="VARCHAR" property="useCharacter" />
+    <result column="VIN" jdbcType="VARCHAR" property="VIN" />
+    <result column="IssuingOrganizations" jdbcType="VARCHAR" property="issuingOrganizations" />
+    <result column="RegisterDate" jdbcType="INTEGER" property="registerDate" />
+    <result column="IssueDate" jdbcType="INTEGER" property="issueDate" />
+    <result column="VehicleEnergyType" jdbcType="VARCHAR" property="vehicleEnergyType" />
+    <result column="VehicleTonnage" jdbcType="DECIMAL" property="vehicleTonnage" />
+    <result column="GrossMass" jdbcType="DECIMAL" property="grossMass" />
+    <result column="RoadTransportCertificateNumber" jdbcType="VARCHAR" property="roadTransportCertificateNumber" />
+    <result column="TrailerVehiclePlateNumber" jdbcType="INTEGER" property="trailerVehiclePlateNumber" />
     <result column="Remark" jdbcType="VARCHAR" property="remark" />
   </resultMap>
   <sql id="Base_Column_List">
@@ -41,12 +41,12 @@
       IssueDate, VehicleEnergyType, VehicleTonnage, 
       GrossMass, RoadTransportCertificateNumber, 
       TrailerVehiclePlateNumber, Remark)
-    values (#{id,jdbcType=BIGINT}, #{vehiclenumber,jdbcType=VARCHAR}, #{vehicleplatecolorcode,jdbcType=VARCHAR}, 
-      #{vehicletype,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}, #{usecharacter,jdbcType=VARCHAR}, 
-      #{vin,jdbcType=VARCHAR}, #{issuingorganizations,jdbcType=VARCHAR}, #{registerdate,jdbcType=INTEGER}, 
-      #{issuedate,jdbcType=INTEGER}, #{vehicleenergytype,jdbcType=VARCHAR}, #{vehicletonnage,jdbcType=DECIMAL}, 
-      #{grossmass,jdbcType=DECIMAL}, #{roadtransportcertificatenumber,jdbcType=VARCHAR}, 
-      #{trailervehicleplatenumber,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
+    values (#{id,jdbcType=BIGINT}, #{vehicleNumber,jdbcType=VARCHAR}, #{vehiclePlateColorCode,jdbcType=VARCHAR}, 
+      #{vehicleType,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}, #{useCharacter,jdbcType=VARCHAR}, 
+      #{VIN,jdbcType=VARCHAR}, #{issuingOrganizations,jdbcType=VARCHAR}, #{registerDate,jdbcType=INTEGER}, 
+      #{issueDate,jdbcType=INTEGER}, #{vehicleEnergyType,jdbcType=VARCHAR}, #{vehicleTonnage,jdbcType=DECIMAL}, 
+      #{grossMass,jdbcType=DECIMAL}, #{roadTransportCertificateNumber,jdbcType=VARCHAR}, 
+      #{trailerVehiclePlateNumber,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.xljt.freight.domain.CarInfo">
     insert into CarInfo
@@ -54,46 +54,46 @@
       <if test="id != null">
         id,
       </if>
-      <if test="vehiclenumber != null">
+      <if test="vehicleNumber != null">
         VehicleNumber,
       </if>
-      <if test="vehicleplatecolorcode != null">
+      <if test="vehiclePlateColorCode != null">
         VehiclePlateColorCode,
       </if>
-      <if test="vehicletype != null">
+      <if test="vehicleType != null">
         VehicleType,
       </if>
       <if test="owner != null">
         `Owner`,
       </if>
-      <if test="usecharacter != null">
+      <if test="useCharacter != null">
         UseCharacter,
       </if>
-      <if test="vin != null">
+      <if test="VIN != null">
         VIN,
       </if>
-      <if test="issuingorganizations != null">
+      <if test="issuingOrganizations != null">
         IssuingOrganizations,
       </if>
-      <if test="registerdate != null">
+      <if test="registerDate != null">
         RegisterDate,
       </if>
-      <if test="issuedate != null">
+      <if test="issueDate != null">
         IssueDate,
       </if>
-      <if test="vehicleenergytype != null">
+      <if test="vehicleEnergyType != null">
         VehicleEnergyType,
       </if>
-      <if test="vehicletonnage != null">
+      <if test="vehicleTonnage != null">
         VehicleTonnage,
       </if>
-      <if test="grossmass != null">
+      <if test="grossMass != null">
         GrossMass,
       </if>
-      <if test="roadtransportcertificatenumber != null">
+      <if test="roadTransportCertificateNumber != null">
         RoadTransportCertificateNumber,
       </if>
-      <if test="trailervehicleplatenumber != null">
+      <if test="trailerVehiclePlateNumber != null">
         TrailerVehiclePlateNumber,
       </if>
       <if test="remark != null">
@@ -104,47 +104,47 @@
       <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="vehiclenumber != null">
-        #{vehiclenumber,jdbcType=VARCHAR},
+      <if test="vehicleNumber != null">
+        #{vehicleNumber,jdbcType=VARCHAR},
       </if>
-      <if test="vehicleplatecolorcode != null">
-        #{vehicleplatecolorcode,jdbcType=VARCHAR},
+      <if test="vehiclePlateColorCode != null">
+        #{vehiclePlateColorCode,jdbcType=VARCHAR},
       </if>
-      <if test="vehicletype != null">
-        #{vehicletype,jdbcType=VARCHAR},
+      <if test="vehicleType != null">
+        #{vehicleType,jdbcType=VARCHAR},
       </if>
       <if test="owner != null">
         #{owner,jdbcType=VARCHAR},
       </if>
-      <if test="usecharacter != null">
-        #{usecharacter,jdbcType=VARCHAR},
+      <if test="useCharacter != null">
+        #{useCharacter,jdbcType=VARCHAR},
       </if>
-      <if test="vin != null">
-        #{vin,jdbcType=VARCHAR},
+      <if test="VIN != null">
+        #{VIN,jdbcType=VARCHAR},
       </if>
-      <if test="issuingorganizations != null">
-        #{issuingorganizations,jdbcType=VARCHAR},
+      <if test="issuingOrganizations != null">
+        #{issuingOrganizations,jdbcType=VARCHAR},
       </if>
-      <if test="registerdate != null">
-        #{registerdate,jdbcType=INTEGER},
+      <if test="registerDate != null">
+        #{registerDate,jdbcType=INTEGER},
       </if>
-      <if test="issuedate != null">
-        #{issuedate,jdbcType=INTEGER},
+      <if test="issueDate != null">
+        #{issueDate,jdbcType=INTEGER},
       </if>
-      <if test="vehicleenergytype != null">
-        #{vehicleenergytype,jdbcType=VARCHAR},
+      <if test="vehicleEnergyType != null">
+        #{vehicleEnergyType,jdbcType=VARCHAR},
       </if>
-      <if test="vehicletonnage != null">
-        #{vehicletonnage,jdbcType=DECIMAL},
+      <if test="vehicleTonnage != null">
+        #{vehicleTonnage,jdbcType=DECIMAL},
       </if>
-      <if test="grossmass != null">
-        #{grossmass,jdbcType=DECIMAL},
+      <if test="grossMass != null">
+        #{grossMass,jdbcType=DECIMAL},
       </if>
-      <if test="roadtransportcertificatenumber != null">
-        #{roadtransportcertificatenumber,jdbcType=VARCHAR},
+      <if test="roadTransportCertificateNumber != null">
+        #{roadTransportCertificateNumber,jdbcType=VARCHAR},
       </if>
-      <if test="trailervehicleplatenumber != null">
-        #{trailervehicleplatenumber,jdbcType=INTEGER},
+      <if test="trailerVehiclePlateNumber != null">
+        #{trailerVehiclePlateNumber,jdbcType=INTEGER},
       </if>
       <if test="remark != null">
         #{remark,jdbcType=VARCHAR},
@@ -154,47 +154,47 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.xljt.freight.domain.CarInfo">
     update CarInfo
     <set>
-      <if test="vehiclenumber != null">
-        VehicleNumber = #{vehiclenumber,jdbcType=VARCHAR},
+      <if test="vehicleNumber != null">
+        VehicleNumber = #{vehicleNumber,jdbcType=VARCHAR},
       </if>
-      <if test="vehicleplatecolorcode != null">
-        VehiclePlateColorCode = #{vehicleplatecolorcode,jdbcType=VARCHAR},
+      <if test="vehiclePlateColorCode != null">
+        VehiclePlateColorCode = #{vehiclePlateColorCode,jdbcType=VARCHAR},
       </if>
-      <if test="vehicletype != null">
-        VehicleType = #{vehicletype,jdbcType=VARCHAR},
+      <if test="vehicleType != null">
+        VehicleType = #{vehicleType,jdbcType=VARCHAR},
       </if>
       <if test="owner != null">
         `Owner` = #{owner,jdbcType=VARCHAR},
       </if>
-      <if test="usecharacter != null">
-        UseCharacter = #{usecharacter,jdbcType=VARCHAR},
+      <if test="useCharacter != null">
+        UseCharacter = #{useCharacter,jdbcType=VARCHAR},
       </if>
-      <if test="vin != null">
-        VIN = #{vin,jdbcType=VARCHAR},
+      <if test="VIN != null">
+        VIN = #{VIN,jdbcType=VARCHAR},
       </if>
-      <if test="issuingorganizations != null">
-        IssuingOrganizations = #{issuingorganizations,jdbcType=VARCHAR},
+      <if test="issuingOrganizations != null">
+        IssuingOrganizations = #{issuingOrganizations,jdbcType=VARCHAR},
       </if>
-      <if test="registerdate != null">
-        RegisterDate = #{registerdate,jdbcType=INTEGER},
+      <if test="registerDate != null">
+        RegisterDate = #{registerDate,jdbcType=INTEGER},
       </if>
-      <if test="issuedate != null">
-        IssueDate = #{issuedate,jdbcType=INTEGER},
+      <if test="issueDate != null">
+        IssueDate = #{issueDate,jdbcType=INTEGER},
       </if>
-      <if test="vehicleenergytype != null">
-        VehicleEnergyType = #{vehicleenergytype,jdbcType=VARCHAR},
+      <if test="vehicleEnergyType != null">
+        VehicleEnergyType = #{vehicleEnergyType,jdbcType=VARCHAR},
       </if>
-      <if test="vehicletonnage != null">
-        VehicleTonnage = #{vehicletonnage,jdbcType=DECIMAL},
+      <if test="vehicleTonnage != null">
+        VehicleTonnage = #{vehicleTonnage,jdbcType=DECIMAL},
       </if>
-      <if test="grossmass != null">
-        GrossMass = #{grossmass,jdbcType=DECIMAL},
+      <if test="grossMass != null">
+        GrossMass = #{grossMass,jdbcType=DECIMAL},
       </if>
-      <if test="roadtransportcertificatenumber != null">
-        RoadTransportCertificateNumber = #{roadtransportcertificatenumber,jdbcType=VARCHAR},
+      <if test="roadTransportCertificateNumber != null">
+        RoadTransportCertificateNumber = #{roadTransportCertificateNumber,jdbcType=VARCHAR},
       </if>
-      <if test="trailervehicleplatenumber != null">
-        TrailerVehiclePlateNumber = #{trailervehicleplatenumber,jdbcType=INTEGER},
+      <if test="trailerVehiclePlateNumber != null">
+        TrailerVehiclePlateNumber = #{trailerVehiclePlateNumber,jdbcType=INTEGER},
       </if>
       <if test="remark != null">
         Remark = #{remark,jdbcType=VARCHAR},
@@ -204,20 +204,20 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.xljt.freight.domain.CarInfo">
     update CarInfo
-    set VehicleNumber = #{vehiclenumber,jdbcType=VARCHAR},
-      VehiclePlateColorCode = #{vehicleplatecolorcode,jdbcType=VARCHAR},
-      VehicleType = #{vehicletype,jdbcType=VARCHAR},
+    set VehicleNumber = #{vehicleNumber,jdbcType=VARCHAR},
+      VehiclePlateColorCode = #{vehiclePlateColorCode,jdbcType=VARCHAR},
+      VehicleType = #{vehicleType,jdbcType=VARCHAR},
       `Owner` = #{owner,jdbcType=VARCHAR},
-      UseCharacter = #{usecharacter,jdbcType=VARCHAR},
-      VIN = #{vin,jdbcType=VARCHAR},
-      IssuingOrganizations = #{issuingorganizations,jdbcType=VARCHAR},
-      RegisterDate = #{registerdate,jdbcType=INTEGER},
-      IssueDate = #{issuedate,jdbcType=INTEGER},
-      VehicleEnergyType = #{vehicleenergytype,jdbcType=VARCHAR},
-      VehicleTonnage = #{vehicletonnage,jdbcType=DECIMAL},
-      GrossMass = #{grossmass,jdbcType=DECIMAL},
-      RoadTransportCertificateNumber = #{roadtransportcertificatenumber,jdbcType=VARCHAR},
-      TrailerVehiclePlateNumber = #{trailervehicleplatenumber,jdbcType=INTEGER},
+      UseCharacter = #{useCharacter,jdbcType=VARCHAR},
+      VIN = #{VIN,jdbcType=VARCHAR},
+      IssuingOrganizations = #{issuingOrganizations,jdbcType=VARCHAR},
+      RegisterDate = #{registerDate,jdbcType=INTEGER},
+      IssueDate = #{issueDate,jdbcType=INTEGER},
+      VehicleEnergyType = #{vehicleEnergyType,jdbcType=VARCHAR},
+      VehicleTonnage = #{vehicleTonnage,jdbcType=DECIMAL},
+      GrossMass = #{grossMass,jdbcType=DECIMAL},
+      RoadTransportCertificateNumber = #{roadTransportCertificateNumber,jdbcType=VARCHAR},
+      TrailerVehiclePlateNumber = #{trailerVehiclePlateNumber,jdbcType=INTEGER},
       Remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

@@ -1,0 +1,29 @@
+2020-04-15 14:02:39,265 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8795 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:02:39,275 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:02:41,219 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.287 seconds (JVM running for 3.379)
+2020-04-15 14:09:51,446 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8833 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:09:51,454 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:09:53,267 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.098 seconds (JVM running for 3.064)
+2020-04-15 14:11:10,744 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8842 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:11:10,752 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:11:12,605 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.135 seconds (JVM running for 3.095)
+2020-04-15 14:11:25,889 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8847 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:11:25,897 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:11:27,818 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.204 seconds (JVM running for 3.172)
+2020-04-15 14:12:23,397 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8857 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:12:23,404 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:12:25,190 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.052 seconds (JVM running for 2.994)
+2020-04-15 14:12:46,804 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8862 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:12:46,811 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:12:48,597 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.059 seconds (JVM running for 3.015)
+2020-04-15 14:13:22,695 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8868 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:13:22,702 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:13:24,509 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.078 seconds (JVM running for 3.014)
+2020-04-15 14:27:56,309 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8905 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:27:56,317 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:27:58,059 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.002 seconds (JVM running for 2.918)
+2020-04-15 14:47:21,036 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8973 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:47:21,044 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:47:22,862 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.086 seconds (JVM running for 2.992)
+2020-04-15 14:47:23,077 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-15 14:47:23,757 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

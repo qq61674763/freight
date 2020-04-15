@@ -1,0 +1,5 @@
+2020-04-15 14:47:21,036 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Starting CarInfoServiceImplTest on localhost with PID 8973 (started by xurao in /Users/xurao/WorkSpace/CompanyProject/Freight/develop/freight)
+2020-04-15 14:47:21,044 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - No active profile set, falling back to default profiles: default
+2020-04-15 14:47:22,862 [main] INFO  com.xljt.freight.service.Impl.CarInfoServiceImplTest - Started CarInfoServiceImplTest in 2.086 seconds (JVM running for 2.992)
+2020-04-15 14:47:23,077 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-15 14:47:23,757 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
