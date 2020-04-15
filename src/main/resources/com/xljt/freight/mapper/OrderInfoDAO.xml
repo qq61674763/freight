@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xljt.freight.mapper.OrderInfoDAO">
+  <resultMap id="BaseResultMap" type="com.xljt.freight.domain.OrderInfo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="OriginalDocumentNumber" jdbcType="VARCHAR" property="originalDocumentNumber" />
+    <result column="ShippingNoteNumber" jdbcType="VARCHAR" property="shippingNoteNumber" />
+    <result column="SerialNumber" jdbcType="VARCHAR" property="serialNumber" />
+    <result column="VehicleAmount" jdbcType="INTEGER" property="vehicleAmount" />
+    <result column="TransportTypeCode" jdbcType="INTEGER" property="transportTypeCode" />
+    <result column="SendToProDateTime" jdbcType="INTEGER" property="sendToProDateTime" />
+    <result column="Carrier" jdbcType="VARCHAR" property="carrier" />
+    <result column="UnifiedSocialCreditIdentifier" jdbcType="VARCHAR" property="unifiedSocialCreditIdentifier" />
+    <result column="PermitNumber" jdbcType="VARCHAR" property="permitNumber" />
+    <result column="ConsignmentDateTime" jdbcType="INTEGER" property="consignmentDateTime" />
+    <result column="BusinessTypeCode" jdbcType="VARCHAR" property="businessTypeCode" />
+    <result column="DespatchActualDateTime" jdbcType="INTEGER" property="despatchActualDateTime" />
+    <result column="GoodsReceiptDateTime" jdbcType="INTEGER" property="goodsReceiptDateTime" />
+    <result column="ConsignorInfo_id" jdbcType="BIGINT" property="consignorInfo_id" />
+    <result column="ConsigneeInfo_id" jdbcType="BIGINT" property="consigneeInfo_id" />
+    <result column="TotalMonetaryAmount" jdbcType="DECIMAL" property="totalMonetaryAmount" />
+    <result column="VehicleInfo_id" jdbcType="BIGINT" property="vehicleInfo_id" />
+    <result column="ActualCarrierInfo_id" jdbcType="BIGINT" property="actualCarrierInfo_id" />
+    <result column="InsuranceInformation_id" jdbcType="BIGINT" property="insuranceInformation_id" />
+    <result column="Remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, OriginalDocumentNumber, ShippingNoteNumber, SerialNumber, VehicleAmount, TransportTypeCode, 
+    SendToProDateTime, Carrier, UnifiedSocialCreditIdentifier, PermitNumber, ConsignmentDateTime, 
+    BusinessTypeCode, DespatchActualDateTime, GoodsReceiptDateTime, ConsignorInfo_id, 
+    ConsigneeInfo_id, TotalMonetaryAmount, VehicleInfo_id, ActualCarrierInfo_id, InsuranceInformation_id, 
+    Remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from OrderInfo
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from OrderInfo
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.xljt.freight.domain.OrderInfo">
+    insert into OrderInfo (id, OriginalDocumentNumber, ShippingNoteNumber, 
+      SerialNumber, VehicleAmount, TransportTypeCode, 
+      SendToProDateTime, Carrier, UnifiedSocialCreditIdentifier, 
+      PermitNumber, ConsignmentDateTime, BusinessTypeCode, 
+      DespatchActualDateTime, GoodsReceiptDateTime, 
+      ConsignorInfo_id, ConsigneeInfo_id, TotalMonetaryAmount, 
+      VehicleInfo_id, ActualCarrierInfo_id, InsuranceInformation_id, 
+      Remark)
+    values (#{id,jdbcType=BIGINT}, #{originalDocumentNumber,jdbcType=VARCHAR}, #{shippingNoteNumber,jdbcType=VARCHAR}, 
+      #{serialNumber,jdbcType=VARCHAR}, #{vehicleAmount,jdbcType=INTEGER}, #{transportTypeCode,jdbcType=INTEGER}, 
+      #{sendToProDateTime,jdbcType=INTEGER}, #{carrier,jdbcType=VARCHAR}, #{unifiedSocialCreditIdentifier,jdbcType=VARCHAR}, 
+      #{permitNumber,jdbcType=VARCHAR}, #{consignmentDateTime,jdbcType=INTEGER}, #{businessTypeCode,jdbcType=VARCHAR}, 
+      #{despatchActualDateTime,jdbcType=INTEGER}, #{goodsReceiptDateTime,jdbcType=INTEGER}, 
+      #{consignorInfo_id,jdbcType=BIGINT}, #{consigneeInfo_id,jdbcType=BIGINT}, #{totalMonetaryAmount,jdbcType=DECIMAL}, 
+      #{vehicleInfo_id,jdbcType=BIGINT}, #{actualCarrierInfo_id,jdbcType=BIGINT}, #{insuranceInformation_id,jdbcType=BIGINT}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xljt.freight.domain.OrderInfo">
+    insert into OrderInfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="originalDocumentNumber != null">
+        OriginalDocumentNumber,
+      </if>
+      <if test="shippingNoteNumber != null">
+        ShippingNoteNumber,
+      </if>
+      <if test="serialNumber != null">
+        SerialNumber,
+      </if>
+      <if test="vehicleAmount != null">
+        VehicleAmount,
+      </if>
+      <if test="transportTypeCode != null">
+        TransportTypeCode,
+      </if>
+      <if test="sendToProDateTime != null">
+        SendToProDateTime,
+      </if>
+      <if test="carrier != null">
+        Carrier,
+      </if>
+      <if test="unifiedSocialCreditIdentifier != null">
+        UnifiedSocialCreditIdentifier,
+      </if>
+      <if test="permitNumber != null">
+        PermitNumber,
+      </if>
+      <if test="consignmentDateTime != null">
+        ConsignmentDateTime,
+      </if>
+      <if test="businessTypeCode != null">
+        BusinessTypeCode,
+      </if>
+      <if test="despatchActualDateTime != null">
+        DespatchActualDateTime,
+      </if>
+      <if test="goodsReceiptDateTime != null">
+        GoodsReceiptDateTime,
+      </if>
+      <if test="consignorInfo_id != null">
+        ConsignorInfo_id,
+      </if>
+      <if test="consigneeInfo_id != null">
+        ConsigneeInfo_id,
+      </if>
+      <if test="totalMonetaryAmount != null">
+        TotalMonetaryAmount,
+      </if>
+      <if test="vehicleInfo_id != null">
+        VehicleInfo_id,
+      </if>
+      <if test="actualCarrierInfo_id != null">
+        ActualCarrierInfo_id,
+      </if>
+      <if test="insuranceInformation_id != null">
+        InsuranceInformation_id,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="originalDocumentNumber != null">
+        #{originalDocumentNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="shippingNoteNumber != null">
+        #{shippingNoteNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="serialNumber != null">
+        #{serialNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleAmount != null">
+        #{vehicleAmount,jdbcType=INTEGER},
+      </if>
+      <if test="transportTypeCode != null">
+        #{transportTypeCode,jdbcType=INTEGER},
+      </if>
+      <if test="sendToProDateTime != null">
+        #{sendToProDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="carrier != null">
+        #{carrier,jdbcType=VARCHAR},
+      </if>
+      <if test="unifiedSocialCreditIdentifier != null">
+        #{unifiedSocialCreditIdentifier,jdbcType=VARCHAR},
+      </if>
+      <if test="permitNumber != null">
+        #{permitNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="consignmentDateTime != null">
+        #{consignmentDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="businessTypeCode != null">
+        #{businessTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="despatchActualDateTime != null">
+        #{despatchActualDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="goodsReceiptDateTime != null">
+        #{goodsReceiptDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="consignorInfo_id != null">
+        #{consignorInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="consigneeInfo_id != null">
+        #{consigneeInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="totalMonetaryAmount != null">
+        #{totalMonetaryAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="vehicleInfo_id != null">
+        #{vehicleInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="actualCarrierInfo_id != null">
+        #{actualCarrierInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="insuranceInformation_id != null">
+        #{insuranceInformation_id,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xljt.freight.domain.OrderInfo">
+    update OrderInfo
+    <set>
+      <if test="originalDocumentNumber != null">
+        OriginalDocumentNumber = #{originalDocumentNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="shippingNoteNumber != null">
+        ShippingNoteNumber = #{shippingNoteNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="serialNumber != null">
+        SerialNumber = #{serialNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleAmount != null">
+        VehicleAmount = #{vehicleAmount,jdbcType=INTEGER},
+      </if>
+      <if test="transportTypeCode != null">
+        TransportTypeCode = #{transportTypeCode,jdbcType=INTEGER},
+      </if>
+      <if test="sendToProDateTime != null">
+        SendToProDateTime = #{sendToProDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="carrier != null">
+        Carrier = #{carrier,jdbcType=VARCHAR},
+      </if>
+      <if test="unifiedSocialCreditIdentifier != null">
+        UnifiedSocialCreditIdentifier = #{unifiedSocialCreditIdentifier,jdbcType=VARCHAR},
+      </if>
+      <if test="permitNumber != null">
+        PermitNumber = #{permitNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="consignmentDateTime != null">
+        ConsignmentDateTime = #{consignmentDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="businessTypeCode != null">
+        BusinessTypeCode = #{businessTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="despatchActualDateTime != null">
+        DespatchActualDateTime = #{despatchActualDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="goodsReceiptDateTime != null">
+        GoodsReceiptDateTime = #{goodsReceiptDateTime,jdbcType=INTEGER},
+      </if>
+      <if test="consignorInfo_id != null">
+        ConsignorInfo_id = #{consignorInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="consigneeInfo_id != null">
+        ConsigneeInfo_id = #{consigneeInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="totalMonetaryAmount != null">
+        TotalMonetaryAmount = #{totalMonetaryAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="vehicleInfo_id != null">
+        VehicleInfo_id = #{vehicleInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="actualCarrierInfo_id != null">
+        ActualCarrierInfo_id = #{actualCarrierInfo_id,jdbcType=BIGINT},
+      </if>
+      <if test="insuranceInformation_id != null">
+        InsuranceInformation_id = #{insuranceInformation_id,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xljt.freight.domain.OrderInfo">
+    update OrderInfo
+    set OriginalDocumentNumber = #{originalDocumentNumber,jdbcType=VARCHAR},
+      ShippingNoteNumber = #{shippingNoteNumber,jdbcType=VARCHAR},
+      SerialNumber = #{serialNumber,jdbcType=VARCHAR},
+      VehicleAmount = #{vehicleAmount,jdbcType=INTEGER},
+      TransportTypeCode = #{transportTypeCode,jdbcType=INTEGER},
+      SendToProDateTime = #{sendToProDateTime,jdbcType=INTEGER},
+      Carrier = #{carrier,jdbcType=VARCHAR},
+      UnifiedSocialCreditIdentifier = #{unifiedSocialCreditIdentifier,jdbcType=VARCHAR},
+      PermitNumber = #{permitNumber,jdbcType=VARCHAR},
+      ConsignmentDateTime = #{consignmentDateTime,jdbcType=INTEGER},
+      BusinessTypeCode = #{businessTypeCode,jdbcType=VARCHAR},
+      DespatchActualDateTime = #{despatchActualDateTime,jdbcType=INTEGER},
+      GoodsReceiptDateTime = #{goodsReceiptDateTime,jdbcType=INTEGER},
+      ConsignorInfo_id = #{consignorInfo_id,jdbcType=BIGINT},
+      ConsigneeInfo_id = #{consigneeInfo_id,jdbcType=BIGINT},
+      TotalMonetaryAmount = #{totalMonetaryAmount,jdbcType=DECIMAL},
+      VehicleInfo_id = #{vehicleInfo_id,jdbcType=BIGINT},
+      ActualCarrierInfo_id = #{actualCarrierInfo_id,jdbcType=BIGINT},
+      InsuranceInformation_id = #{insuranceInformation_id,jdbcType=BIGINT},
+      Remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
